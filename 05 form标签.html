@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 用于向后台提供数据 -->
+		<form action="" method="post">	
+			<!-- 单行文本输入 -->
+			<input type="text" name="username" id = "" value="luxp"/>
+			<!-- 多行文本输入，内部输入的空格都是有效的 -->
+			<textarea rows="10" cols="40">
+hello
+			</textarea>
+			
+			<input type="color" name="" id="" value="" />
+			<input type="date" name="" id="" value="" />
+			<!-- 邮箱提交的时候需要符合邮箱格式，格式不符合的不能提供 -->
+			<input type="email" name="" id="" value="" />
+			<input type="file" name="" id="" value="" />
+			<!-- 隐藏域 -->
+			<input type="hidden" name="" id="" value="" />
+			<input type="image" name="" id="" value="" src="../img/渔夫.jpg" width="100" height="50"/>
+			<!-- 提交按钮 -->
+			<input type="submit" name="" id="" value="submit" />
+			<input type="password" name="" id="" value="" />
+			<input type="number" name="" id="" value="" /><br>
+			<!-- 单选按钮，注意name值相等的时候才是单选,check属性确定默认选项 -->
+			Man <input type="radio" name="sex" id="" value=""  checked="checked"/>
+			Women <input type="radio" name="sex" id="" value="" /><br>
+			<!-- 多选按钮 -->
+			1 <input type="checkbox" name="like" id="" value="" />
+			2 <input type="checkbox" name="like" id="" value="" />
+			3 <input type="checkbox" name="like" id="" value="" /><br>
+			<input type="range" name="" id="" value="20" min="10" max="100"/>
+			<input type="reset" name="" id="" value="重置" /><br>
+			<input type="search" name="" id="" value="" /><br>
+			<!-- 下拉菜单，可以进行多选，多选的时候需要按住shift键 -->
+			<select>
+				<option value ="上海">上海</option>
+				<option value ="北京">北京</option>
+			</select><br>
+			<select multiple="multiple">
+				<option value ="上海">上海</option>
+				<option value ="北京">北京</option>
+			</select><br>
+			
+		</form>
+	</body>
+</html>
