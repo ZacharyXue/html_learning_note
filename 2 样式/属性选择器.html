@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				color: #FF0000;
+			}
+			#title{
+				font-size: 20px;
+			}
+			.group1{
+				color: blue;
+			}
+			/* 表示只要类名包含某个值 */
+			[class*="group2"]{
+				color: green;
+			}
+			/* 表示类名之后为某个值 */
+			[class$="a"]{
+				font-size: 30px;
+			}
+			/* 表示头部要包含某个值 */
+			[class^="B"]{
+				font-weight: bold;
+			}
+			[type="email"]{
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="title">学习为主，炒股为辅</p>
+		<p class="group1">学习为主，炒股为辅</p>
+		<p class="group1">学习为主，炒股为辅</p>
+		<p class="group2a">学习为主，炒股为辅</p>
+		<p class="group2b">学习为主，炒股为辅</p>
+		<p class="group3a">学习为主，炒股为辅</p>
+		<p class="Bgroup4a">学习为主，炒股为辅</p>
+		<input type="email" name="" id="" value="" />
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 链接的点击效果是由伪类来编写的,伪类是有顺序的 -->
+		<style type="text/css">
+			a{
+				/* 控制下划线 */
+				text-decoration: none;
+			}
+			/* 在链接还没有被点击，常态的性质 */
+			a:link{
+				color: red;
+			}
+			/* 在链接被点击后的性质 */
+			a:visited{
+				color: black;
+			}
+			/* 在链接点中 */
+			a:active{
+				color: #55ff00;
+			}
+			/* 控制鼠标放上去的效果 */
+			a:hover{
+				color: gray;
+				font-size: 18px;
+			}
+			.news>li:first-child{
+				color: red;
+			}
+			.news>li:nth-child(2){
+				color: green;
+			}
+			.news>li:last-child{
+				color: blue;
+			}
+			a:before{
+				content: "Hello ";
+			}
+			a:after{
+				content: " end";
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://www.baidu.com">link1</a>
+		<a href="https://xueqiu.com/">link2</a>
+		<ul class="news">
+			<li>a</li>
+			<li>b</li>
+			<li>c</li>
+			<li>d</li>
+			<li>e</li>
+		</ul>
+	</body>
+</html>

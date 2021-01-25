@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>纯CSS多级菜单</title>
+	<!-- 这个自己没有写出来，没有思路…… -->
+	<style>
+		/* 主菜单样式 */
+		a {
+			text-decoration: none;
+			font-family: 微软雅黑;
+			white-space: nowrap;
+		}
+		#nav {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			z-index: 100;
+			background: #528e34;
+			font-size: 12px;
+			width: 740px;
+			height: 30px;
+			list-style: none;
+		}	
+		#nav>li {
+			position: relative;
+			margin:0 15px 0 15px;
+			background: #039AE3;
+			float: left;
+		}
+		#nav>li>a{
+			display: block;
+			margin: 0 10px 0 10px;
+			white-space: nowrap;
+			height: 30px;
+			line-height: 30px;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;	
+		}
+		#nav>li:hover{
+			background: #0F91F5;
+		}
+		/* 第一级下拉菜单样式 */
+		/* 隐藏二级菜单 */
+		#nav>li>ul>li>ul{display: none;}
+		/* 第一级子菜单在主菜单下方 */
+		#nav>li>ul{
+			position: absolute;
+			left: 0px;
+			top:  0px;
+			margin: 0;
+			padding: 0;
+			z-index: 100;
+			list-style: none;
+			display: none;
+			
+		}
+		#nav>li:hover>ul{
+			top: 30px;
+			display:block;
+		}
+		#nav>li>ul>li{
+			padding:10px;
+			background: #efefef;
+		}
+		#nav>li>ul>li:hover{
+			background: #779e25;
+		}
+		#nav>li>a{
+			display: block;
+			margin: 0 10px 0 10px;
+			white-space: nowrap;
+			height: 30px;
+			line-height: 30px;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;	
+		}
+		/* 二级及以上菜单 */
+		#nav>li>ul li{
+			position: relative;
+			padding: 10px;
+			background: #efefef;
+		}
+		#nav>li>ul li ul{
+			
+			position: absolute;
+			left: -1000px;
+			top: -1000px;
+			margin: 0;
+			padding: 0;
+			z-index: 100;
+			list-style: none;
+
+		}
+		#nav>li>ul li:hover>ul{
+			left: 100%;
+			top: 0px;
+			display: block;
+		}
+		#nav>li>ul li:hover{
+			background: #779e25;
+		}
+
+	</style>
+</head>
+<body>
+	<ul id="nav">
+		<!-- 一级菜单和下一级菜单写在同一个li标签里面，当时自己就纠结在这个怎么实现 -->
+		<li><a href="#">首页</a></li>
+		<li><a href="#">菜单一</a>
+			<ul>
+				<li><a href="#">菜单一｜一级一</a></li>
+				<li><a href="#">菜单一｜一级二</a></li>
+				<li><a href="#">菜单一｜一级三</a></li>
+			</ul>
+		</li>
+		<li><a href="#">菜单二&raquo;</a>
+			<ul>
+				<li><a href="#">菜单二｜一级一 &raquo;</a>
+					<ul>
+						<li><a href="#">菜单二｜一级一｜二级一</a></li>
+						<li><a href="#">菜单二｜一级一｜二级二</a></li>
+						<li><a href="#">菜单二｜一级一｜二级三</a></li>
+					
+					</ul>
+				</li>
+				<li>
+					<a href="#">菜单二｜一级二 &raquo;</a>
+					<ul>
+						<li><a href="#">菜单二｜一级二｜二级一</a></li>
+						<li><a href="#">菜单二｜一级二｜二级二</a></li>
+						<li><a href="#">菜单二｜一级二｜二级三</a></li>
+					
+					</ul>
+				</li>
+				<li>
+					<a href="#">菜单二｜一级三  &raquo;</a>
+					<ul>
+						<li><a href="#">菜单二｜一级三｜二级一 &raquo;</a>
+							<ul>
+								<li><a href="#">菜单二｜一级三｜三级一 </a></li>
+								<li><a href="#">菜单二｜一级三｜三级二 </a></li>
+								<li><a href="#">菜单二｜一级三｜三级三 </a></li>
+		
+							</ul>
+						</li>
+						<li><a href="#">菜单二｜一级三｜二级二 &raquo;</a>
+							<ul>
+								<li><a href="#">菜单二｜一级三｜二级二 ｜三级一</a></li>
+								<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 &raquo;</a>
+									<ul>
+										<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级一 &raquo;</a>
+											<ul>
+												<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级一｜五级一</a></li>
+												<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级一｜五级二</a></li>
+												<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级一｜五级三</a></li>
+											</ul>
+										</li>
+										<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级二</a></li>
+										<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级三 &raquo;</a>
+											<ul>
+												<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级三 ｜五级一</a></li>
+												<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级三 ｜五级二</a></li>
+												<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级三 ｜五级三</a></li>
+			
+											</ul>
+										</li>
+										<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级四</a></li>
+										<li><a href="#">菜单二｜一级三｜二级二 ｜三级二 ｜四级五</a></li>
+									</ul>
+								</li>
+								<li><a href="#">菜单二｜一级三｜二级二 ｜三级三</a></li>
+								<li><a href="#">菜单二｜一级三｜二级二 ｜三级四</a></li>
+							</ul>
+						</li>
+						<li><a href="#">菜单二｜一级三｜二级三 &raquo;</a>
+							<ul>
+								<li><a href="#">菜单二｜一级三｜二级三｜三级一</a></li>
+								<li><a href="#">菜单二｜一级三｜二级三｜三级二</a></li>
+								<li><a href="#">菜单二｜一级三｜二级三｜三级三</a></li>
+								<li><a href="#">菜单二｜一级三｜二级三｜三级四</a></li>
+								<li><a href="#">菜单二｜一级三｜二级三｜三级五</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">菜单二｜一级三 </a></li>
+				<li><a href="#">菜单二｜一级四 </a></li>
+			</ul>
+		</li>
+		<li><a href="#">菜单三&raquo;</a>
+			<ul>
+				<li><a href="#">菜单三｜一级一 </a></li>
+				<li><a href="#">菜单三｜一级一 </a></li>
+				<li><a href="#">菜单三｜一级一 </a></li>
+			</ul>
+		</li>
+		<li><a href="#">菜单四&raquo;</a>
+			<ul>
+				<li><a href="#">菜单四｜一级一 </a></li>
+				<li><a href="#">菜单四｜一级二 </a></li>
+			</ul>
+		</li>
+		<li><a href="#">菜单五</a></li>
+	</ul>
+</body>
+</html>

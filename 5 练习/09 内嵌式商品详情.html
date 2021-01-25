@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.container{
+				width: 400px;
+				height: 300px;
+				border: 2px solid red;
+			}
+			/* 关于nth-child()的使用：
+			 自己以为要选择container类下的某一个元素应该表示为：.container:nth-child()
+			 但是实际上应该是下面的表达方式，有点不习惯，网上也没有查到相应说法*/
+			.container div:nth-child(3){
+				background-color: #0000FF;
+			}
+			/* 要使文字居中需要使用text-align属性，在网上查找才知道。 */
+			.goods{
+				width: 200px;
+				height: 100px;
+				text-align: center;
+				float: left;
+			}
+			.goods #title{
+				font-weight: bold;
+				margin: 0px;
+				padding: 0px;
+			}
+			.goods #origin_prices{
+				color: red;		
+				margin: 0px;
+				padding: 0px;
+			}
+			.goods #prices{
+				margin: 0px;
+				padding: 0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="goods">
+				<p id="title">《Python XP极速手册》</p>
+				<del id="origin_prices">原价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45元</del>
+				<p id="prices">会员价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25元</p>
+			</div>
+			<div class="goods">
+				<p id="title">《Python XP极速手册》</p>
+				<del id="origin_prices">原价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45元</del>
+				<p id="prices">会员价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25元</p>
+			</div>
+			<div class="goods">
+				<p id="title">《Python XP极速手册》</p>
+				<del id="origin_prices">原价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45元</del>
+				<p id="prices">会员价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25元</p>
+			</div>
+			<div class="goods">
+				<p id="title">《Python XP极速手册》</p>
+				<del id="origin_prices">原价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45元</del>
+				<p id="prices">会员价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25元</p>
+			</div>
+			<div class="goods">
+				<p id="title">《Python XP极速手册》</p>
+				<del id="origin_prices">原价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45元</del>
+				<p id="prices">会员价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25元</p>
+			</div>
+			<div class="goods">
+				<p id="title">《Python XP极速手册》</p>
+				<del id="origin_prices">原价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 45元</del>
+				<p id="prices">会员价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25元</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				color: red;
+			}
+			/* 后代选择器 */
+			.blue li{
+				color: blue;
+			}
+			/* 子代选择器 */
+			.blue>li{
+				color: red;
+			}
+			/* 兄弟选择器 */
+			#li_1+li{
+				color: orange;
+			}
+			.a1+a{
+				font-weight: bold;
+			}
+			.a2+em{
+				font-weight: bold;
+			}
+			/* 多类选择器 */
+			.red{
+				color: red;
+			}
+			.bold{
+				font-weight: bold;
+			}
+			.red.bold{
+				font-size: 28px;
+			}
+			/* 群组选择器 */
+			.normal,.bold{
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 后代选择器、子代选择器 -->
+		<ul class="blue">
+			<li>abc</li>
+			<li>def</li>
+			<li>
+				<ul>
+					<li>123</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>ABC</li>
+			<li>DEF</li>
+		</ul>
+		<!-- 兄弟选择器 -->
+		<ul>
+			<li id="li_1">111</li>
+			<li id="li_2">222</li>
+			<li id="li_3">333</li>
+		</ul>
+		<p>
+			<a href="" class="a1">link1</a>
+			<a href="" class="a2">link2</a>
+			<em>em1</em>
+			<em>em2</em>
+		</p>
+		<!-- 多类选择器 -->
+		<p>
+			<a href="" class="red bold">link1</a>
+			<a href="" class="red normal">link2</a>
+			<a href="" class="blue bold">link2</a>
+		</p>
+	</body>
+</html>

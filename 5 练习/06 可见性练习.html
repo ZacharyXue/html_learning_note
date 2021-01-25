@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			a:link{
+				color: #000000;
+			}
+			a:visited{
+				color: #ffd91a;
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- overflow之前没有用过，该属性规定了当内容溢出元素框时发生的事情，
+		 其中，scroll为创建滚动条，hidden为多余内容被修剪-->
+		<p style="width: 100px; height: 200px; overflow: scroll;">
+			<img src="../img/1.png" >
+		</p>
+		<p style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+			pycharm拥有两个大的版本：
+				社区版-community <br>
+				专业版-professional	<br>		
+			pycharm面向软件开发人员。专业版需要付费，在专业版中提供了flask，django
+			一些开发环境与调试能力，通常使用社区版已经可以满足大部分编程场景。 
+			Pycharm提供了丰富的代码补全，代码高亮，调试，版本控制等能力，使用上手也很快.
+		</p>
+		<p>
+			<!-- 我使用了br标签实现换行，而参考中将a标签下style属性display设置为
+			 block实现了换行-->
+			<h3>为您推荐 只能使用a标签，不能使用ul、dl、table</h3>
+			<a href="a">Python21天入门</a> <br>
+			<a href="b">Python30天精通</a> <br>
+			<a href="c">Python60天放弃</a> <br>
+		</p>
+		<p>
+			<h3>导航 - 只能使用ul、li</h3>
+			<!-- ul标签下type规定了列表中每一项前面是圆点、方框还是没有
+			 对于display进行设置实现不换行我一开始下意识在ul中用，仔细想想肯定是错的-->
+			<ul type="none" >
+				<li style="display: inline-block;">Python21天入门</li>
+				<li style="display: inline-block;">Python30天精通</li>
+				<li style="display: inline-block;">Python60天放弃</li>
+			</ul>
+		</p>
+	</body>
+</html>

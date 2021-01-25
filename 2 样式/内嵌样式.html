@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="font-size: 24px;">
+	<!-- html为文件根结点，每个浏览器根结点字体大小不一样，这会使得rem大小不同，
+	 所以我们最好自己设置根结点的字体大小-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- display: none(不显示) block(显示在不同行) inline(可以显示在同一行)
+		inline-block(将block元素显示在同一行)-->
+		<!-- 如果用%来指定大小的时候，尺寸会随着界面的大小而调整 -->
+		<p style="border: 0.0625rem solid #f00; color: blue;font-size: 1.75rem;
+		background-image: url(../img/渔夫.jpg) ; display: inline-block;
+		width: 13rem;height: 3rem;overflow: hidden;vertical-align: bottom;
+		">
+			Hello world!
+		</p>
+		<p style="border: 0.0625rem solid #f00; color: blue;font-size: 1.75rem;
+		background-image: url(../img/渔夫.jpg) ;display: inline-block;
+		width: 13rem;height: 3rem;overflow: hidden;vertical-align: bottom;
+		">
+			Hello world!
+		</p>
+		<p>		
+			<img src="../img/渔夫.jpg" style="width: 9.375rem;height: 6.25rem;">
+			<img src="../img/渔夫.jpg" style="width: 9.375rem;height: 6.25rem;">
+			<a href="" style="width: 6.25rem;height: 6.25rem; display: inline-block;
+			border: 0.0625rem solid #f00;vertical-align: bottom;">百度</a>
+		</p>
+		<p style="width: 6.25rem;height: 6.25rem; border: 0.0625rem solid #f00;">
+			<a href="" >百度</a>
+		</p>
+	</body>
+</html>

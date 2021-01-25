@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				/* 通过两种方式的对比可以看出，
+				float改变了文档中的排列顺序
+				 而使用display只是去改变排列方式，排列数序不会变*/
+				float: left;
+				/* display: inline-block;
+				vertical-align: bottom; */
+			}
+			.box1{
+				width: 200px;
+				height: 150px;
+				border: 1px solid red;
+			}
+			.box2{
+				width: 200px;
+				height: 50px;
+				border: 1px solid blue;
+			}
+			.box3{
+				width: 200px;
+				height: 100px;
+				border: 1px solid green;
+			}
+			/* 如果要是元素按照不同的排列方式进行排序，
+			 就不能使用display只能使用float*/
+			.box4_1{
+				width: 30%;
+				height: 30%;
+				background-color: blue;
+				float: left;
+			}
+			.box4_2{
+				width: 30%;
+				height: 30%;
+				background-color: red;
+				float: right;
+			}
+			ul{
+				width: 500px;
+			}
+			li{
+				width: 100px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			box1
+			<div class="box4_1">
+				box4_1
+			</div>
+			<div class="box4_2">
+				box4_2
+			</div>
+		</div>
+		<div class="box2">
+			
+		</div>
+		<div class="box3">
+			
+		</div>
+		<div class="box3">
+			
+		</div>
+		<ul>
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.header a{
+				text-decoration: none;
+				margin: 10px;
+			}
+			/* 这里利用后代选择器的时候。我写成了：‘.main dl dt’ 
+			实际上不需要这样一级一级地写，见下*/
+			.main dt{
+				color: #0055ff;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<a href="">首页</a>
+			<a href="">新闻</a>
+			<a href="">关于我们</a>
+			<a href="">在线留言</a>
+		</div>
+		<div class="main">
+			<dl>
+				<dt>Python的数字类型</dt>
+				<dd>数字类型的值为整数、浮点数</dd>
+			</dl>
+			<dl>
+				<dt>Python的字符串类型</dt>
+				<dd>字符串类型字符组成，在ascii码中规定了128个字符</dd>
+			</dl>
+			<dl>
+				<dt>Python的字典类型</dt>
+				<dd>字典类型由key,value键值对组成</dd>
+			</dl>
+		</div>
+	</body>
+</html>
